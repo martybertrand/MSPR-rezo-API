@@ -6,14 +6,10 @@ const app = express();
 app.use(cors());
 
 const user = require('./routes/users.js');
-const login = require('./routes/login.js')
 
 app.use(express.json());
 
 app.use('/users', user),
-app.use('/login', login)
-
-
 
 /*app.use('/users', (req, res) => {
     res.send({
